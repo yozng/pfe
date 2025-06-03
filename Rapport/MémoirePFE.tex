@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt,twoside]{report} %beamer : presentation
+%\usepackage[utf8]{inputenc}  % Encodage utf8 à conserver ! %latin1
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}   % Pour adopter les règles de typographie française
+%\usepackage[left=cm,right=cm,top=cm,bottom=cm]{geometry}
+% Les bibliothèques de l'American Mathematical Society pour les maths
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\usepackage{lettrine}
+
+\usepackage{xcolor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\fancyhead[CE]{\leftmark}
+%\fancyhead[CO]{\rightmark}
+%\fancyfoot[CE,CO]{\thepage}
+%\fancyfoot[RE]{IREM de Lyon}
+%\fancyfoot[LO]{\LaTeX{}\ldots{}pour le prof de maths}
+%%%%%%%%
+%\renewcommand{\headrulewidth}{0.4pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ \numberwithin{equation}{section} %% Comment out for sequentially-numbered
+ \numberwithin{figure}{section} %% Comment out for sequentially-numbered
+
+% Les définitions, théorèmes et autres lemmes, corollaires, propositions,  
+ \newtheorem{theo}{Th\'eor\`eme}[section]
+ \newtheorem{defi}[theo]{D\'efinition}
+ \newtheorem{prop}[theo]{Proposition} %%Delete [theo] to re-start numbering
+ \newtheorem{exem}[theo]{Exemple}
+ \newtheorem{exer}[section]{Exercise}%%Delete [section] for sequential numbering
+ \newtheorem{rema}[theo]{Remarque}   
+ \newtheorem{lemm}[theo]{Lemme} %%Delete [theo] to re-start numbering   
+ \newtheorem{coro}[theo]{Corollaire} %%Delete [theo] to re-start numbering  
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\usepackage{fullpage} % Agrandit les dimensions du texte (hauteur, largeur,
+                      % etc.) par rapport à celles par défaut. Attention
+                      % ce package ne se trouve pas dans toutes les
+                      % distributions LaTeX
+
+\usepackage{graphicx}
+%\topmargin=-.5in \textheight=9.in\leftmargin=-.2in
+\begin{document} 
+\include{Couverture}
+
+\pagenumbering{roman}
+ \cleardoublepage 
+ 
+\include{Remerciements}
+\include{Resume}
+\include{Abstract}
+\tableofcontents
+%\mainmatter
+%\pagestyle{headings}
+\include{Chap0-Introduction}
+\include{Chap1-}
+\include{Chap2-}
+\include{Conclusion}
+\include{Bibliographie}
+
+
+
+
+\end{document}
